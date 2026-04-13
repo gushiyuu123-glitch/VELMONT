@@ -20,20 +20,20 @@ function HeroSp() {
         <ImageReveal
           src="/images/hero2.png"
           alt="VELMONT showroom hero"
-          className="h-full w-full object-cover object-[72%_center]"
+          className="h-full w-full object-cover object-[75%_center]"
           delay={0}
           duration={1800}
-          startScale={1.035}
-          startBlur={0.45}
+          startScale={1.03}
+          startBlur={0.4}
         />
 
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(8,9,11,0.72)_0%,rgba(8,9,11,0.34)_22%,rgba(8,9,11,0.10)_42%,rgba(8,9,11,0.10)_100%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(10,11,13,0.30)_0%,rgba(10,11,13,0.16)_22%,rgba(10,11,13,0.06)_42%,rgba(10,11,13,0)_70%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(8,9,11,0.74)_0%,rgba(8,9,11,0.26)_24%,rgba(8,9,11,0.06)_48%,rgba(8,9,11,0)_72%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(8,9,11,0.68)_0%,rgba(8,9,11,0.30)_22%,rgba(8,9,11,0.08)_42%,rgba(8,9,11,0.10)_100%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(10,11,13,0.24)_0%,rgba(10,11,13,0.12)_22%,rgba(10,11,13,0.04)_42%,rgba(10,11,13,0)_70%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(8,9,11,0.74)_0%,rgba(8,9,11,0.24)_24%,rgba(8,9,11,0.05)_48%,rgba(8,9,11,0)_72%)]" />
 
         <div
           className={[
-            "absolute inset-0 bg-[radial-gradient(circle_at_74%_16%,rgba(255,255,255,0.06),transparent_24%),radial-gradient(circle_at_58%_44%,rgba(255,255,255,0.02),transparent_38%)]",
+            "absolute inset-0 bg-[radial-gradient(circle_at_76%_18%,rgba(255,255,255,0.05),transparent_24%),radial-gradient(circle_at_62%_44%,rgba(255,255,255,0.018),transparent_38%)]",
             "transition-opacity duration-[2200ms] ease-out",
             isReady ? "opacity-100" : "opacity-0",
           ].join(" ")}
@@ -41,11 +41,11 @@ function HeroSp() {
 
         <div
           className={[
-            "pointer-events-none absolute inset-y-0 -left-[44%] w-[82%]",
-            "bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.018)_42%,rgba(255,255,255,0.006)_72%,rgba(255,255,255,0)_100%)]",
-            "blur-[15px]",
+            "pointer-events-none absolute inset-y-0 -left-[34%] w-[64%]",
+            "bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.014)_42%,rgba(255,255,255,0.005)_72%,rgba(255,255,255,0)_100%)]",
+            "blur-[13px]",
             "transition-[transform,opacity] duration-[2200ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
-            isReady ? "translate-x-[145%] opacity-100" : "translate-x-0 opacity-0",
+            isReady ? "translate-x-[136%] opacity-100" : "translate-x-0 opacity-0",
           ].join(" ")}
         />
 
@@ -53,7 +53,7 @@ function HeroSp() {
       </div>
 
       <div className="container-shell relative z-10 flex min-h-[100svh] flex-col justify-between pt-24 pb-11">
-        <div className="max-w-[276px]">
+        <div className="max-w-[286px] pl-[8px]">
           <Reveal
             as="p"
             className="eyebrow mb-5 text-[10px] tracking-[0.24em] text-white/60"
@@ -65,7 +65,7 @@ function HeroSp() {
             Precision in Motion
           </Reveal>
 
-          <h1 className="font-serif text-[36px] font-medium leading-[1] tracking-[-0.026em] text-[rgba(243,241,237,0.95)]">
+          <h1 className="font-serif text-[36px] font-medium leading-[0.98] tracking-[-0.026em] text-[rgba(243,241,237,0.95)]">
             <RevealLine delay={280} duration={1400} y={20}>
               Luxury,
             </RevealLine>
@@ -78,10 +78,10 @@ function HeroSp() {
           </h1>
         </div>
 
-        <div className="max-w-[244px]">
+        <div className="max-w-[248px] pl-[8px]">
           <Reveal
             as="p"
-            className="text-[12px] leading-[1.92] text-[rgba(232,234,236,0.56)]"
+            className="text-[12px] leading-[1.92] text-[rgba(232,234,236,0.58)]"
             delay={560}
             duration={1400}
             y={16}
