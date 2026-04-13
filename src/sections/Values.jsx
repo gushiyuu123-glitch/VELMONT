@@ -39,10 +39,10 @@ function CrownIcon({ className = "" }) {
 
 function Values() {
   return (
-    <section
-      id="values"
-      className="bg-[linear-gradient(to_bottom,#111214_0%,#121317_100%)] px-5 pt-24 pb-16 sm:px-6 md:pt-28 md:pb-20 lg:pt-32 lg:pb-24"
-    >
+<section
+  id="values"
+  className="bg-[linear-gradient(to_bottom,#111214_0%,#121317_100%)] px-5 pt-32 pb-16 sm:px-6 md:pt-36 md:pb-20 lg:pt-40 lg:pb-24"
+>
       <div className="container-shell">
         <div className="border-y border-white/8 py-12 md:py-14 lg:py-16">
           <div className="mx-auto max-w-[920px] text-center">
