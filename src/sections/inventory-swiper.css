@@ -1,0 +1,89 @@
+.inventory-section,
+.inventory-shell,
+.inventory-swiper-wrap {
+  overflow-x: clip;
+}
+
+.inventory-swiper-wrap {
+  position: relative;
+  overflow-y: hidden;
+}
+
+/* Swiper本体の見切れ・初期化時の揺れ対策 */
+.inventory-swiper,
+.inventory-swiper.swiper {
+  overflow: hidden;
+}
+
+.inventory-swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.inventory-slide {
+  height: auto;
+  box-sizing: border-box;
+  opacity: 0.82;
+  transform: scale(0.992);
+  transition:
+    opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.inventory-swiper .swiper-slide-active,
+.inventory-swiper .swiper-slide-next,
+.inventory-swiper .swiper-slide-prev {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.inventory-card {
+  height: 100%;
+}
+
+/* controlsの高さを先に確保して初期化時の縦ズレを減らす */
+.inventory-controls {
+  min-height: 48px;
+}
+
+.inventory-pagination {
+  position: static !important;
+}
+
+.inventory-pagination .swiper-pagination-bullet {
+  width: 20px;
+  height: 2px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.18);
+  opacity: 1;
+  margin: 0 !important;
+  transition:
+    background-color 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    width 500ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.inventory-pagination .swiper-pagination-bullet-active {
+  width: 34px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.inventory-prev.swiper-button-disabled,
+.inventory-next.swiper-button-disabled {
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+/* 端末によっては初回描画時の1pxはみ出しが出る保険 */
+body {
+  overflow-x: clip;
+}
+
+@supports not (overflow: clip) {
+  .inventory-section,
+  .inventory-shell,
+  .inventory-swiper-wrap,
+  body {
+    overflow-x: hidden;
+  }
+}
