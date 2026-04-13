@@ -44,7 +44,7 @@ function InventorySp() {
       </div>
 
       <div className="container-shell inventory-shell relative">
-        <div className="mx-auto max-w-[308px] text-center">
+        <div className="mx-auto max-w-[348px] text-center">
           <InViewReveal
             as="p"
             className="eyebrow mb-4 justify-center text-[10px] tracking-[0.22em] text-white/40"
@@ -56,9 +56,9 @@ function InventorySp() {
             Curated Inventory
           </InViewReveal>
 
-          <h2 className="mx-auto max-w-[11ch] font-serif text-[32px] leading-[1.03] tracking-[-0.02em] text-[rgba(243,241,237,0.94)]">
+          <h2 className="mx-auto max-w-[15ch] font-serif text-[30px] leading-[1.08] tracking-[-0.024em] text-[rgba(243,241,237,0.94)]">
             <InViewLines
-              lines={["Selected", "Vehicles,", "Presented", "with Authority."]}
+              lines={["Selected Vehicles,", "Presented with Authority."]}
               duration={1220}
               distance={18}
               lineDelay={90}
@@ -68,7 +68,7 @@ function InventorySp() {
 
           <InViewReveal
             as="p"
-            className="mx-auto mt-7 max-w-[27ch] text-[13px] leading-[1.95] text-white/56"
+            className="mx-auto mt-5 max-w-[31ch] text-[12.8px] leading-[1.9] text-white/56"
             direction="up"
             distance={16}
             duration={1120}
@@ -81,7 +81,7 @@ function InventorySp() {
         </div>
 
         <InViewReveal
-          className="mt-12 overflow-hidden"
+          className="mt-11 overflow-hidden"
           direction="up"
           distance={14}
           duration={1100}

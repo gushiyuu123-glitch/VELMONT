@@ -5,7 +5,7 @@ function ShowroomSp() {
   return (
     <section
       id="showroom"
-      className="relative overflow-hidden bg-[linear-gradient(to_bottom,#18191c_0%,#141518_48%,#111214_100%)] px-5 pt-28 pb-24 md:hidden"
+      className="relative overflow-hidden bg-[linear-gradient(to_bottom,#18191c_0%,#141518_48%,#111214_100%)] px-5 pt-24 pb-22 md:hidden"
     >
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-x-0 top-0 h-px bg-white/6" />
@@ -14,7 +14,7 @@ function ShowroomSp() {
       </div>
 
       <div className="container-shell relative">
-        <div className="mx-auto max-w-[308px] text-center">
+        <div className="mx-auto max-w-[348px] text-center">
           <InViewReveal
             as="p"
             className="eyebrow mb-4 justify-center text-[10px] tracking-[0.22em] text-white/40"
@@ -26,9 +26,9 @@ function ShowroomSp() {
             Showroom
           </InViewReveal>
 
-          <h2 className="mx-auto max-w-[11ch] font-serif text-[32px] leading-[1.03] tracking-[-0.02em] text-[rgba(243,241,237,0.94)]">
+          <h2 className="mx-auto max-w-[14ch] font-serif text-[30px] leading-[1.08] tracking-[-0.024em] text-[rgba(243,241,237,0.94)]">
             <InViewLines
-              lines={["A Space", "Designed", "for Quiet", "Decisions."]}
+              lines={["A Space Designed", "for Quiet Decisions."]}
               duration={1220}
               distance={18}
               lineDelay={90}
@@ -38,7 +38,7 @@ function ShowroomSp() {
 
           <InViewReveal
             as="p"
-            className="mx-auto mt-7 max-w-[27ch] text-[13px] leading-[1.95] text-white/56"
+            className="mx-auto mt-5 max-w-[31ch] text-[12.8px] leading-[1.9] text-white/56"
             direction="up"
             distance={16}
             duration={1120}
@@ -51,7 +51,7 @@ function ShowroomSp() {
         </div>
 
         <InViewReveal
-          className="mx-auto mt-12 max-w-[420px]"
+          className="mx-auto mt-11 max-w-[420px]"
           direction="up"
           distance={22}
           duration={1240}
@@ -75,7 +75,7 @@ function ShowroomSp() {
                 <p className="text-[10px] uppercase tracking-[0.16em] text-white/38">
                   Visit the Space
                 </p>
-                <p className="mt-3 max-w-[16ch] font-serif text-[24px] leading-[1.08] tracking-[-0.01em] text-white/90">
+                <p className="mt-3 max-w-[18ch] font-serif text-[22px] leading-[1.1] tracking-[-0.01em] text-white/90">
                   Quietly composed for more considered decisions.
                 </p>
               </div>
@@ -84,7 +84,7 @@ function ShowroomSp() {
         </InViewReveal>
 
         <InViewReveal
-          className="mt-8 flex justify-center"
+          className="mt-7 flex justify-center"
           direction="up"
           distance={12}
           duration={960}

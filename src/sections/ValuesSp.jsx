@@ -36,13 +36,13 @@ function ValuesSp() {
   return (
     <section
       id="values"
-      className="bg-[linear-gradient(to_bottom,#111214_0%,#121317_100%)] px-5 pt-26 pb-18 md:hidden"
+      className="bg-[linear-gradient(to_bottom,#111214_0%,#121317_100%)] px-5 pt-24 pb-18 md:hidden"
     >
       <div className="container-shell">
-        <div className="border-y border-white/7 py-11">
-          <div className="mx-auto max-w-[308px] text-center">
+        <div className="border-y border-white/7 py-10">
+          <div className="mx-auto max-w-[348px] text-center">
             <InViewReveal
-              className="mb-5 flex justify-center"
+              className="mb-4 flex justify-center"
               direction="up"
               distance={12}
               duration={1000}
@@ -64,13 +64,11 @@ function ValuesSp() {
               What We Value
             </InViewReveal>
 
-            <h2 className="mx-auto max-w-[11ch] font-serif text-[32px] leading-[1.04] tracking-[-0.02em] text-[rgba(243,241,237,0.94)]">
+            <h2 className="mx-auto max-w-[15ch] font-serif text-[30px] leading-[1.08] tracking-[-0.024em] text-[rgba(243,241,237,0.94)]">
               <InViewLines
                 lines={[
-                  "What matters",
-                  "is not volume,",
-                  "but the quality",
-                  "of trust.",
+                  "What matters is not volume,",
+                  "but the quality of trust.",
                 ]}
                 duration={1180}
                 distance={18}
@@ -81,13 +79,13 @@ function ValuesSp() {
 
             <InViewReveal
               as="div"
-              className="mx-auto mt-7 max-w-[27ch]"
+              className="mx-auto mt-5 max-w-[31ch]"
               direction="up"
               distance={16}
               duration={1150}
               threshold={0.18}
             >
-              <p className="text-[13px] leading-[1.95] text-white/56">
+              <p className="text-[12.8px] leading-[1.9] text-white/56">
                 VELMONT が大切にしているのは、ただ高級車を並べることではありません。
                 一台ごとの佇まい、状態、背景まで丁寧に見極め、急がせることなく、
                 落ち着いて比較し、納得して選べる時間ごと届けることを大切にしています。

@@ -18,12 +18,12 @@ const aboutPoints = [
 
 function AboutSp() {
   return (
-<section
-  id="about"
-  className="bg-[linear-gradient(to_bottom,#111214_0%,#141518_42%,#18191c_100%)] px-5 pt-28 pb-24 md:hidden"
->
-  <div className="container-shell">
-    <div className="mx-auto max-w-[308px] pt-2 text-center">
+    <section
+      id="about"
+      className="bg-[linear-gradient(to_bottom,#111214_0%,#141518_42%,#18191c_100%)] px-5 pt-24 pb-22 md:hidden"
+    >
+      <div className="container-shell">
+        <div className="mx-auto max-w-[348px] pt-2 text-center">
           <InViewReveal
             as="p"
             className="eyebrow mb-4 justify-center text-[10px] tracking-[0.22em] text-white/42"
@@ -35,9 +35,9 @@ function AboutSp() {
             About VELMONT
           </InViewReveal>
 
-          <h2 className="mx-auto max-w-[11ch] font-serif text-[34px] leading-[1.03] tracking-[-0.02em] text-[rgba(243,241,237,0.94)]">
+          <h2 className="mx-auto max-w-[15ch] font-serif text-[31px] leading-[1.08] tracking-[-0.024em] text-[rgba(243,241,237,0.94)]">
             <InViewLines
-              lines={["Defined by", "Selection,", "Guided by", "Trust."]}
+              lines={["Defined by Selection,", "Guided by Trust."]}
               duration={1200}
               distance={18}
               lineDelay={90}
@@ -47,7 +47,7 @@ function AboutSp() {
 
           <InViewReveal
             as="p"
-            className="mx-auto mt-7 max-w-[27ch] text-[13px] leading-[1.95] text-white/56"
+            className="mx-auto mt-5 max-w-[31ch] text-[12.8px] leading-[1.9] text-white/56"
             direction="up"
             distance={16}
             duration={1150}
@@ -58,7 +58,7 @@ function AboutSp() {
           </InViewReveal>
         </div>
 
-        <div className="mx-auto mt-12 max-w-[420px] space-y-3.5">
+        <div className="mx-auto mt-11 max-w-[420px] space-y-3.5">
           {aboutPoints.map((item, index) => (
             <InViewReveal
               key={item.title}
