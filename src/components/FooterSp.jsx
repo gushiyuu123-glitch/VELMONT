@@ -45,42 +45,27 @@ function FooterSp() {
             >
               <ul className="flex flex-wrap items-center justify-center gap-x-7 gap-y-3 text-[10px] uppercase tracking-[0.14em] text-white/36">
                 <li>
-                  <a
-                    href="#inventory"
-                    className="transition-colors duration-500 hover:text-white/78"
-                  >
+                  <a href="#inventory" className="transition-colors duration-500 hover:text-white/78">
                     Inventory
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#about"
-                    className="transition-colors duration-500 hover:text-white/78"
-                  >
+                  <a href="#about" className="transition-colors duration-500 hover:text-white/78">
                     About
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#showroom"
-                    className="transition-colors duration-500 hover:text-white/78"
-                  >
+                  <a href="#showroom" className="transition-colors duration-500 hover:text-white/78">
                     Showroom
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#contact"
-                    className="transition-colors duration-500 hover:text-white/78"
-                  >
+                  <a href="#contact" className="transition-colors duration-500 hover:text-white/78">
                     Contact
                   </a>
                 </li>
                 <li>
-                  <a
-                    href="#access"
-                    className="transition-colors duration-500 hover:text-white/78"
-                  >
+                  <a href="#access" className="transition-colors duration-500 hover:text-white/78">
                     Access
                   </a>
                 </li>

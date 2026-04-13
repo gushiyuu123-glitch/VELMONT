@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Reveal from "./Reveal";
-import RevealX from "./RevealX";
 
 const navItems = [
   { href: "#values", label: "Values" },
@@ -24,78 +23,53 @@ function HeaderSp() {
   const handleClose = () => setMenuOpen(false);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-30">
-      <div className="container-shell flex items-center justify-between py-5 sm:py-6 lg:py-8">
+    <header className="absolute inset-x-0 top-0 z-40 md:hidden">
+      <div className="container-shell flex items-center justify-between py-5">
         <Reveal
           as="a"
           href="#"
           aria-label="VELMONT ホームへ"
-          className="relative z-40 font-serif text-[1.05rem] uppercase tracking-logo text-velmont-stone sm:text-[1.18rem] lg:text-[1.28rem]"
+          className="relative z-50 font-serif text-[1.02rem] uppercase tracking-[0.18em] text-[rgba(243,241,237,0.92)]"
           delay={120}
           duration={1100}
-          y={12}
+          y={10}
           blur={1}
         >
           VELMONT
         </Reveal>
+<button
+  type="button"
+  aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"}
+  aria-expanded={menuOpen}
+  aria-controls="mobile-nav"
+  onClick={() => setMenuOpen((prev) => !prev)}
+  className="relative z-50 inline-flex h-11 w-11 items-center justify-center rounded-full bg-black/18 backdrop-blur-[4px]"
+>
+  <span className="sr-only">menu</span>
 
-        {/* PC Navigation */}
-        <nav aria-label="メインナビゲーション" className="hidden md:block">
-          <ul className="flex items-center gap-6 lg:gap-8 text-[12px] lg:text-[13px] font-medium tracking-[0.06em] text-white/80">
-            {navItems.map((item, index) => (
-              <li key={item.href} className="overflow-hidden">
-                <RevealX delay={220 + index * 120} duration={580} x={-24}>
-                  <a
-                    className="block transition-colors duration-500 hover:text-white"
-                    href={item.href}
-                  >
-                    {item.label}
-                  </a>
-                </RevealX>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
-        {/* Mobile Toggle */}
-        <button
-          type="button"
-          aria-label={menuOpen ? "メニューを閉じる" : "メニューを開く"}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-nav"
-          onClick={() => setMenuOpen((prev) => !prev)}
-          className="relative z-40 inline-flex h-11 w-11 items-center justify-center md:hidden"
-        >
-          <span className="sr-only">menu</span>
-
-          <span className="relative block h-4 w-5">
-            <span
-              className={`absolute left-0 top-0 h-px w-5 bg-white transition-all duration-500 ${
-                menuOpen ? "translate-y-[7px] rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`absolute left-0 top-[7px] h-px w-5 bg-white transition-all duration-500 ${
-                menuOpen ? "opacity-0" : "opacity-100"
-              }`}
-            />
-            <span
-              className={`absolute left-0 top-[14px] h-px w-5 bg-white transition-all duration-500 ${
-                menuOpen ? "-translate-y-[7px] -rotate-45" : ""
-              }`}
-            />
-          </span>
-        </button>
+  <span className="relative block h-4 w-5">
+    <span
+      className={`absolute left-0 top-0 h-px w-5 bg-white transition-all duration-500 ${
+        menuOpen ? "translate-y-[7px] rotate-45" : ""
+      }`}
+    />
+    <span
+      className={`absolute left-0 top-[7px] h-px w-5 bg-white/90 transition-all duration-500 ${
+        menuOpen ? "opacity-0" : "opacity-100"
+      }`}
+    />
+    <span
+      className={`absolute left-0 top-[14px] h-px w-5 bg-white transition-all duration-500 ${
+        menuOpen ? "-translate-y-[7px] -rotate-45" : ""
+      }`}
+    />
+  </span>
+</button>
       </div>
 
-      {/* Mobile Panel */}
-      <div
-        className={`md:hidden ${
-          menuOpen ? "pointer-events-auto" : "pointer-events-none"
-        }`}
-      >
+      <div className={menuOpen ? "pointer-events-auto" : "pointer-events-none"}>
         <div
-          className={`absolute inset-0 h-screen bg-black/45 backdrop-blur-[6px] transition-opacity duration-500 ${
+          className={`absolute inset-0 h-screen bg-black/42 backdrop-blur-[6px] transition-opacity duration-500 ${
             menuOpen ? "opacity-100" : "opacity-0"
           }`}
           onClick={handleClose}
@@ -105,33 +79,46 @@ function HeaderSp() {
         <nav
           id="mobile-nav"
           aria-label="モバイルナビゲーション"
-          className={`absolute inset-x-0 top-0 min-h-screen bg-[rgba(10,10,11,0.92)] px-7 pb-10 pt-28 transition-all duration-500 ${
+          className={`absolute inset-x-0 top-0 min-h-screen bg-[rgba(10,11,13,0.92)] px-7 pb-10 pt-28 transition-all duration-500 ${
             menuOpen
               ? "translate-y-0 opacity-100"
-              : "-translate-y-4 opacity-0"
+              : "-translate-y-3 opacity-0"
           }`}
         >
-          <ul className="flex flex-col gap-6 border-t border-white/10 pt-8">
-            {navItems.map((item, index) => (
-              <li
-                key={item.href}
-                className={`transition-all duration-500 ${
-                  menuOpen
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-3 opacity-0"
-                }`}
-                style={{ transitionDelay: `${120 + index * 55}ms` }}
-              >
-                <a
-                  href={item.href}
-                  onClick={handleClose}
-                  className="block text-[0.95rem] font-medium tracking-[0.08em] text-white/86 transition-colors duration-300 hover:text-white"
+          <div className="border-t border-white/8 pt-8">
+            <ul className="flex flex-col gap-6">
+              {navItems.map((item, index) => (
+                <li
+                  key={item.href}
+                  className={`transition-all duration-500 ${
+                    menuOpen
+                      ? "translate-y-0 opacity-100"
+                      : "translate-y-2 opacity-0"
+                  }`}
+                  style={{ transitionDelay: `${120 + index * 55}ms` }}
                 >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+                  <a
+                    href={item.href}
+                    onClick={handleClose}
+                    className="block text-[0.92rem] font-medium tracking-[0.08em] text-white/78 transition-colors duration-300 hover:text-white"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+
+            <div
+              className={`mt-10 border-t border-white/6 pt-6 transition-all duration-500 ${
+                menuOpen ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
+              }`}
+              style={{ transitionDelay: "460ms" }}
+            >
+              <p className="max-w-[18ch] text-[11px] leading-6 tracking-[0.08em] text-white/34">
+                Quietly curated for more considered decisions.
+              </p>
+            </div>
+          </div>
         </nav>
       </div>
     </header>

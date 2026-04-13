@@ -10,12 +10,7 @@ function CrownIcon({ className = "" }) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path
-        d="M10 48H54"
-        stroke="currentColor"
-        strokeWidth="1.35"
-        strokeLinecap="round"
-      />
+      <path d="M10 48H54" stroke="currentColor" strokeWidth="1.35" strokeLinecap="round" />
       <path
         d="M14 46L20 22L32 34L44 18L50 46"
         stroke="currentColor"

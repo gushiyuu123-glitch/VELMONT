@@ -7,7 +7,6 @@ function ShowroomSp() {
       id="showroom"
       className="relative overflow-hidden bg-[linear-gradient(to_bottom,#18191c_0%,#141518_48%,#111214_100%)] px-5 pt-28 pb-24 md:hidden"
     >
-      {/* atmosphere */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute inset-x-0 top-0 h-px bg-white/6" />
         <div className="absolute right-[10%] top-[14%] h-[220px] w-[220px] rounded-full bg-white/[0.014] blur-3xl" />

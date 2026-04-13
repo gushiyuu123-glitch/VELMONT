@@ -58,12 +58,7 @@ function InventorySp() {
 
           <h2 className="mx-auto max-w-[11ch] font-serif text-[32px] leading-[1.03] tracking-[-0.02em] text-[rgba(243,241,237,0.94)]">
             <InViewLines
-              lines={[
-                "Selected",
-                "Vehicles,",
-                "Presented",
-                "with Authority.",
-              ]}
+              lines={["Selected", "Vehicles,", "Presented", "with Authority."]}
               duration={1220}
               distance={18}
               lineDelay={90}
@@ -112,18 +107,9 @@ function InventorySp() {
               slidesPerView={1.08}
               spaceBetween={14}
               breakpoints={{
-                0: {
-                  slidesPerView: 1.08,
-                  spaceBetween: 14,
-                },
-                420: {
-                  slidesPerView: 1.1,
-                  spaceBetween: 14,
-                },
-                560: {
-                  slidesPerView: 1.14,
-                  spaceBetween: 16,
-                },
+                0: { slidesPerView: 1.08, spaceBetween: 14 },
+                420: { slidesPerView: 1.1, spaceBetween: 14 },
+                560: { slidesPerView: 1.14, spaceBetween: 16 },
               }}
               className="inventory-swiper"
             >
