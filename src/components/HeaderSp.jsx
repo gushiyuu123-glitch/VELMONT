@@ -11,7 +11,7 @@ const navItems = [
   { href: "#access", label: "Access" },
 ];
 
-function Header() {
+function HeaderSp() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -138,4 +138,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderSp;

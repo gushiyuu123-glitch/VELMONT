@@ -1,19 +1,19 @@
 import InViewReveal from "./InViewReveal";
 
-function Footer() {
+function FooterSp() {
   return (
     <footer
-      className="bg-[#0a0b0d] px-5 pt-28 pb-28 sm:px-6 md:pt-36 md:pb-32 lg:pt-44 lg:pb-40"
+      className="bg-[#0a0b0d] px-5 pt-24 pb-20 md:hidden"
       aria-label="VELMONT フッター"
     >
       <div className="container-shell">
-        <div className="border-t border-white/7 pt-20 md:pt-28 lg:pt-36">
+        <div className="border-t border-white/7 pt-16">
           <div className="flex flex-col items-center text-center">
             <InViewReveal
               as="a"
               href="#"
               aria-label="VELMONT トップへ戻る"
-              className="font-serif text-[2.35rem] leading-none tracking-[-0.03em] text-[rgba(243,241,237,0.94)] sm:text-[3rem] md:text-[3.9rem] lg:text-[4.8rem]"
+              className="font-serif text-[2.2rem] leading-none tracking-[-0.03em] text-[rgba(243,241,237,0.94)]"
               direction="up"
               distance={14}
               duration={1100}
@@ -24,7 +24,7 @@ function Footer() {
 
             <InViewReveal
               as="p"
-              className="mt-6 max-w-[32ch] text-[13px] leading-7 text-white/42 sm:text-[14px]"
+              className="mt-5 max-w-[24ch] text-[12px] leading-6 text-white/42"
               direction="up"
               distance={12}
               duration={1000}
@@ -37,13 +37,13 @@ function Footer() {
             <InViewReveal
               as="nav"
               aria-label="フッターナビゲーション"
-              className="mt-14 w-full md:mt-16 lg:mt-20"
+              className="mt-10 w-full"
               direction="up"
               distance={14}
               duration={1100}
               threshold={0.08}
             >
-              <ul className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4 text-[11px] uppercase tracking-[0.16em] text-white/36 sm:gap-x-14 sm:text-[12px] md:gap-x-16 lg:gap-x-20">
+              <ul className="flex flex-wrap items-center justify-center gap-x-7 gap-y-3 text-[10px] uppercase tracking-[0.14em] text-white/36">
                 <li>
                   <a
                     href="#inventory"
@@ -88,7 +88,7 @@ function Footer() {
             </InViewReveal>
 
             <InViewReveal
-              className="mt-12 md:mt-14"
+              className="mt-10"
               direction="up"
               distance={12}
               duration={1000}
@@ -110,7 +110,7 @@ function Footer() {
 
             <InViewReveal
               as="p"
-              className="mt-20 text-[10px] tracking-[0.1em] text-white/20 md:mt-24 lg:mt-28"
+              className="mt-14 text-[10px] tracking-[0.1em] text-white/20"
               direction="up"
               distance={12}
               duration={1000}
@@ -125,4 +125,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default FooterSp;

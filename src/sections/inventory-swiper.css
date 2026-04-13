@@ -13,6 +13,7 @@
 .inventory-swiper,
 .inventory-swiper.swiper {
   overflow: hidden;
+  width: 100%;
 }
 
 .inventory-swiper .swiper-wrapper {
@@ -22,19 +23,23 @@
 .inventory-slide {
   height: auto;
   box-sizing: border-box;
-  opacity: 0.82;
-  transform: scale(0.992);
+  opacity: 0.7;
+  transform: scale(0.988);
   transition:
     opacity 700ms cubic-bezier(0.22, 1, 0.36, 1),
     transform 900ms cubic-bezier(0.22, 1, 0.36, 1);
   will-change: opacity, transform;
 }
 
-.inventory-swiper .swiper-slide-active,
-.inventory-swiper .swiper-slide-next,
-.inventory-swiper .swiper-slide-prev {
+.inventory-swiper .swiper-slide-active {
   opacity: 1;
   transform: scale(1);
+}
+
+.inventory-swiper .swiper-slide-next,
+.inventory-swiper .swiper-slide-prev {
+  opacity: 0.9;
+  transform: scale(0.994);
 }
 
 .inventory-card {

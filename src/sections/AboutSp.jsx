@@ -16,17 +16,17 @@ const aboutPoints = [
   },
 ];
 
-function About() {
+function AboutSp() {
   return (
-    <section
-      id="about"
-      className="bg-[linear-gradient(to_bottom,#111214_0%,#151618_48%,#18191c_100%)] px-5 pt-24 pb-26 sm:px-6 md:pt-28 md:pb-30 lg:pt-32 lg:pb-34"
-    >
-      <div className="container-shell">
-        <div className="mx-auto max-w-[940px] text-center">
+<section
+  id="about"
+  className="bg-[linear-gradient(to_bottom,#111214_0%,#141518_42%,#18191c_100%)] px-5 pt-28 pb-24 md:hidden"
+>
+  <div className="container-shell">
+    <div className="mx-auto max-w-[308px] pt-2 text-center">
           <InViewReveal
             as="p"
-            className="eyebrow mb-4 justify-center"
+            className="eyebrow mb-4 justify-center text-[10px] tracking-[0.22em] text-white/42"
             direction="up"
             distance={14}
             duration={1000}
@@ -35,19 +35,19 @@ function About() {
             About VELMONT
           </InViewReveal>
 
-          <h2 className="mx-auto max-w-[14ch] font-serif text-[38px] leading-[1.01] tracking-[-0.01em] text-velmont-stone sm:text-[46px] lg:max-w-[16ch] lg:text-[56px]">
+          <h2 className="mx-auto max-w-[11ch] font-serif text-[34px] leading-[1.03] tracking-[-0.02em] text-[rgba(243,241,237,0.94)]">
             <InViewLines
-              lines={["Defined by Selection,", "Guided by Trust."]}
+              lines={["Defined by", "Selection,", "Guided by", "Trust."]}
               duration={1200}
-              distance={20}
-              lineDelay={95}
+              distance={18}
+              lineDelay={90}
               threshold={0.22}
             />
           </h2>
 
           <InViewReveal
             as="p"
-            className="mx-auto mt-8 max-w-[45ch] text-[15px] leading-8 text-white/62 sm:text-base md:text-[17px] md:leading-9"
+            className="mx-auto mt-7 max-w-[27ch] text-[13px] leading-[1.95] text-white/56"
             direction="up"
             distance={16}
             duration={1150}
@@ -58,29 +58,29 @@ function About() {
           </InViewReveal>
         </div>
 
-        <div className="mx-auto mt-14 grid max-w-[1180px] gap-4 md:grid-cols-3 lg:mt-16 lg:gap-5">
+        <div className="mx-auto mt-12 max-w-[420px] space-y-3.5">
           {aboutPoints.map((item, index) => (
             <InViewReveal
               key={item.title}
-              className="h-full rounded-[14px] border border-white/8 bg-white/[0.018] p-6 sm:p-7"
+              className="rounded-[22px] border border-white/7 bg-white/[0.016] px-5 py-6"
               delay={index * 90}
               duration={1150}
               direction="up"
               distance={18}
               threshold={0.14}
             >
-              <article className="flex h-full flex-col text-left">
-                <p className="text-[11px] uppercase tracking-[0.14em] text-white/24">
+              <article className="flex flex-col text-left">
+                <p className="text-[10px] uppercase tracking-[0.16em] text-white/20">
                   {String(index + 1).padStart(2, "0")}
                 </p>
 
-                <div className="mt-4 h-px w-10 bg-white/10" />
+                <div className="mt-4 h-px w-9 bg-white/8" />
 
-                <h3 className="mt-5 font-serif text-[23px] leading-tight text-white/90 sm:text-[24px]">
+                <h3 className="mt-4 font-serif text-[21px] leading-[1.16] tracking-[-0.01em] text-white/88">
                   {item.title}
                 </h3>
 
-                <p className="mt-4 text-[14px] leading-7 text-white/56">
+                <p className="mt-3 text-[13px] leading-[1.9] text-white/54">
                   {item.text}
                 </p>
               </article>
@@ -92,4 +92,4 @@ function About() {
   );
 }
 
-export default About;
+export default AboutSp;

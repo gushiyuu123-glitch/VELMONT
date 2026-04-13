@@ -23,7 +23,7 @@ function Contact() {
       className="bg-[linear-gradient(to_bottom,#111214_0%,#0d0e10_100%)] px-5 py-20 sm:px-6 md:py-24 lg:py-28"
     >
       <div className="container-shell">
-        <div className="overflow-hidden rounded-[28px] border border-white/8 bg-white/[0.03]">
+        <div className="overflow-hidden rounded-[14px] border border-white/8 bg-white/[0.02]">
           <div className="grid lg:grid-cols-[minmax(0,1.02fr)_minmax(0,0.98fr)]">
             <div className="border-b border-white/8 p-7 sm:p-8 lg:border-b-0 lg:border-r lg:p-10 xl:p-12">
               <InViewReveal
@@ -109,7 +109,7 @@ function Contact() {
                       type="text"
                       name="name"
                       placeholder="Your Name"
-                      className="h-12 rounded-[14px] border border-white/10 bg-white/[0.025] px-4 text-[14px] text-white/88 outline-none transition-colors duration-500 placeholder:text-white/24 focus:border-white/20"
+                      className="h-12 rounded-[4px] border border-white/10 bg-white/[0.015] px-4 text-[14px] text-white/88 outline-none transition-colors duration-500 placeholder:text-white/24 focus:border-white/18"
                     />
                   </label>
 
@@ -121,7 +121,7 @@ function Contact() {
                       type="email"
                       name="email"
                       placeholder="you@example.com"
-                      className="h-12 rounded-[14px] border border-white/10 bg-white/[0.025] px-4 text-[14px] text-white/88 outline-none transition-colors duration-500 placeholder:text-white/24 focus:border-white/20"
+                      className="h-12 rounded-[4px] border border-white/10 bg-white/[0.015] px-4 text-[14px] text-white/88 outline-none transition-colors duration-500 placeholder:text-white/24 focus:border-white/18"
                     />
                   </label>
                 </div>
@@ -134,7 +134,7 @@ function Contact() {
                     type="text"
                     name="subject"
                     placeholder="Reservation / Vehicle Inquiry"
-                    className="h-12 rounded-[14px] border border-white/10 bg-white/[0.025] px-4 text-[14px] text-white/88 outline-none transition-colors duration-500 placeholder:text-white/24 focus:border-white/20"
+                    className="h-12 rounded-[4px] border border-white/10 bg-white/[0.015] px-4 text-[14px] text-white/88 outline-none transition-colors duration-500 placeholder:text-white/24 focus:border-white/18"
                   />
                 </label>
 
@@ -146,7 +146,7 @@ function Contact() {
                     name="message"
                     rows="6"
                     placeholder="ご希望の車両や来店希望日時などをご記入ください。"
-                    className="min-h-[160px] rounded-[18px] border border-white/10 bg-white/[0.025] px-4 py-4 text-[14px] leading-7 text-white/88 outline-none transition-colors duration-500 placeholder:text-white/24 focus:border-white/20"
+                    className="min-h-[160px] rounded-[4px] border border-white/10 bg-white/[0.015] px-4 py-4 text-[14px] leading-7 text-white/88 outline-none transition-colors duration-500 placeholder:text-white/24 focus:border-white/18"
                   />
                 </label>
 
@@ -157,7 +157,7 @@ function Contact() {
 
                   <button
                     type="submit"
-                    className="inline-flex h-12 items-center justify-center rounded-full border border-white/12 bg-white/[0.06] px-6 text-[13px] font-medium tracking-[0.08em] text-white/88 transition-all duration-500 hover:border-white/18 hover:bg-white/[0.09] hover:text-white"
+                    className="inline-flex h-12 items-center justify-center rounded-[4px] border border-white/12 bg-white/[0.035] px-6 text-[13px] font-medium tracking-[0.08em] text-white/88 transition-all duration-500 hover:border-white/18 hover:bg-white/[0.06] hover:text-white"
                   >
                     送信する
                   </button>
