@@ -7,16 +7,35 @@ function HeroSp() {
   const [isReady, setIsReady] = useState(false);
 
   useEffect(() => {
-    const timer = window.setTimeout(() => {
-      setIsReady(true);
-    }, 120);
+    let raf1 = 0;
+    let raf2 = 0;
+    let timer = 0;
 
-    return () => window.clearTimeout(timer);
+    raf1 = window.requestAnimationFrame(() => {
+      raf2 = window.requestAnimationFrame(() => {
+        timer = window.setTimeout(() => {
+          setIsReady(true);
+        }, 40);
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(raf1);
+      window.cancelAnimationFrame(raf2);
+      window.clearTimeout(timer);
+    };
   }, []);
 
   return (
     <section className="relative isolate min-h-[100svh] overflow-hidden bg-[#111214] md:hidden">
-      <div className="absolute inset-0">
+      {/* background */}
+      <div
+        className={[
+          "absolute inset-0 transition-opacity duration-[900ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
+          isReady ? "opacity-100" : "opacity-0",
+        ].join(" ")}
+        aria-hidden="true"
+      >
         <ImageReveal
           src="/images/hero2.png"
           alt="VELMONT showroom hero"
@@ -52,7 +71,16 @@ function HeroSp() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_82%_54%,rgba(0,0,0,0)_0%,rgba(0,0,0,0.08)_54%,rgba(0,0,0,0.18)_100%)]" />
       </div>
 
-      <div className="container-shell relative z-10 flex min-h-[100svh] flex-col justify-between pt-24 pb-11">
+      {/* content */}
+      <div
+        className={[
+          "container-shell relative z-10 flex min-h-[100svh] flex-col justify-between pt-24 pb-11",
+          "transition-[opacity,transform,visibility] duration-[700ms] ease-[cubic-bezier(0.22,1,0.36,1)]",
+          isReady
+            ? "visible translate-y-0 opacity-100"
+            : "invisible translate-y-[6px] opacity-0",
+        ].join(" ")}
+      >
         <div className="max-w-[286px] pl-[8px]">
           <Reveal
             as="p"

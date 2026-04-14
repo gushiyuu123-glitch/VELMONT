@@ -15,26 +15,55 @@ function InViewReveal({
   rootMargin = "0px 0px -8% 0px",
 }) {
   const ref = useRef(null);
+  const timerRef = useRef(0);
+  const [isMounted, setIsMounted] = useState(false);
   const [isShown, setIsShown] = useState(false);
+
+  useEffect(() => {
+    let raf1 = 0;
+    let raf2 = 0;
+
+    raf1 = window.requestAnimationFrame(() => {
+      raf2 = window.requestAnimationFrame(() => {
+        setIsMounted(true);
+      });
+    });
+
+    return () => {
+      window.cancelAnimationFrame(raf1);
+      window.cancelAnimationFrame(raf2);
+    };
+  }, []);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
 
+    const clearCurrentTimer = () => {
+      if (timerRef.current) {
+        window.clearTimeout(timerRef.current);
+        timerRef.current = 0;
+      }
+    };
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) {
+          clearCurrentTimer();
           if (!triggerOnce) setIsShown(false);
           return;
         }
 
-        const timer = window.setTimeout(() => {
+        clearCurrentTimer();
+
+        timerRef.current = window.setTimeout(() => {
           setIsShown(true);
+          timerRef.current = 0;
         }, delay);
 
-        if (triggerOnce) observer.unobserve(el);
-
-        return () => window.clearTimeout(timer);
+        if (triggerOnce) {
+          observer.unobserve(el);
+        }
       },
       {
         threshold,
@@ -44,13 +73,15 @@ function InViewReveal({
 
     observer.observe(el);
 
-    return () => observer.disconnect();
+    return () => {
+      clearCurrentTimer();
+      observer.disconnect();
+    };
   }, [delay, threshold, triggerOnce, rootMargin]);
 
-  let hiddenTransform = "translate3d(0, 18px, 0) scale(1)";
-  if (direction === "up") {
-    hiddenTransform = `translate3d(0, ${distance}px, 0) scale(${scale})`;
-  } else if (direction === "down") {
+  let hiddenTransform = `translate3d(0, ${distance}px, 0) scale(${scale})`;
+
+  if (direction === "down") {
     hiddenTransform = `translate3d(0, -${distance}px, 0) scale(${scale})`;
   } else if (direction === "left") {
     hiddenTransform = `translate3d(${distance}px, 0, 0) scale(${scale})`;
@@ -63,14 +94,19 @@ function InViewReveal({
       ref={ref}
       className={[
         className,
-        "transition-[opacity,transform,filter] ease-[cubic-bezier(0.22,1,0.36,1)]",
-        "will-change-[opacity,transform]",
+        "will-change-[opacity,transform,filter]",
+        isMounted
+          ? "transition-[opacity,transform,filter] ease-[cubic-bezier(0.22,1,0.36,1)]"
+          : "",
       ].join(" ")}
       style={{
-        transitionDuration: `${duration}ms`,
+        transitionDuration: isMounted ? `${duration}ms` : "0ms",
         opacity: isShown ? 1 : 0,
+        visibility: isShown ? "visible" : "hidden",
         transform: isShown ? "translate3d(0,0,0) scale(1)" : hiddenTransform,
         filter: blur > 0 ? (isShown ? "blur(0px)" : `blur(${blur}px)`) : "none",
+        backfaceVisibility: "hidden",
+        WebkitFontSmoothing: "antialiased",
       }}
     >
       {children}
